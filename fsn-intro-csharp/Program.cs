@@ -8,9 +8,11 @@ Console.WriteLine($"Check out these {traingsRepository.Count} trainings:");
 foreach (var training in traingsRepository.GetAll())
 {
     Console.WriteLine($"{training.Title} - {training.Price} - {training.StartTime}");
+    bool isOutside = training.IsOutside ?? false;
+    Console.WriteLine($"Training is buiten: {(isOutside ? "ja" : "nee")}");
 }
 
-Console.WriteLine("\n\nThes trainings are outside:");
+Console.WriteLine("\n\nThese trainings are outside:");
 var outsideTrainings = traingsRepository
     .GetAll()
     .Where(t => t.IsOutside == true);

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace fsn_intro_csharp.Models;
 
-namespace fsn_intro_csharp.Models;
-
-internal class Training(int id,
+public class Training(int id,
                         string title,
                         decimal price,
                         string description,
